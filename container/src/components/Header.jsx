@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import logo from "../assets/images/logo.png";
+
 const Header = () => {
 	const navigate = useNavigate();
 
@@ -10,12 +12,13 @@ const Header = () => {
 
 	return (
 		<header className="border-b py-4 shadow px-12 xl:px-24 sticky top-0 z-10 bg-white">
-			<nav className="flex items-center justify-center">
+			<nav className="flex items-center">
 				<div
-					className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-black to-gray-400 cursor-pointer"
+					className="flex text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-black to-gray-400 cursor-pointer"
 					onClick={redirectToHome}
 				>
-					News
+					<img src={logo} alt="site logo" width={40} height={40} />
+					<span className="ml-4">World News</span>
 				</div>
 				{/* <ul className="ml-auto flex">
 					<li className="font-semibold text-xl px-4 cursor-pointer">Home</li>
